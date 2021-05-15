@@ -9,6 +9,11 @@ class Language {
         isoCode = map['isoCode']!;
 }
 
+final Map<String, Language> defaultLanguageMap = Map.fromIterable(
+    defaultLanguagesList,
+    key: (element) => element['isoCode'],
+    value: (element) => Language.fromMap(element));
+
 final List defaultLanguagesList = [
   {"isoCode": "ab", "name": "Abkhazian"},
   {"isoCode": "aa", "name": "Afar"},

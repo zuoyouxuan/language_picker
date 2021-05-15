@@ -59,7 +59,6 @@ final List defaultLanguagesList = [
   {"isoCode": "dv", "name": "Dhivehi"},
   {"isoCode": "nl", "name": "Dutch"},
   {"isoCode": "dz", "name": "Dzongkha"},
-  {"isoCode": "alpha2", "name": "English"},
   {"isoCode": "en", "name": "English"},
   {"isoCode": "eo", "name": "Esperanto"},
   {"isoCode": "et", "name": "Estonian"},

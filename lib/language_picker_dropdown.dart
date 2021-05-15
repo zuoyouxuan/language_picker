@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 ///Provides a customizable [DropdownButton] for all languages
 class LanguagePickerDropdown extends StatefulWidget {
   LanguagePickerDropdown(
-      {this.itemBuilder, this.initialValue, this.onValuePicked, this.languagesList});
+      {this.itemBuilder,
+      this.initialValue,
+      this.onValuePicked,
+      this.languagesList});
 
   ///This function will be called to build the child of DropdownMenuItem
   ///If it is not provided, default one will be used which displays
@@ -38,8 +41,7 @@ class _LanguagePickerDropdownState extends State<LanguagePickerDropdown> {
     if (widget.initialValue != null) {
       try {
         _selectedLanguage = _languages
-            .where((language) =>
-                language.isoCode == widget.initialValue)
+            .where((language) => language.isoCode == widget.initialValue)
             .toList()[0];
       } catch (error) {
         throw Exception(
@@ -62,33 +64,22 @@ class _LanguagePickerDropdownState extends State<LanguagePickerDropdown> {
                 : _buildDefaultMenuItem(language)))
         .toList();
 
-    return Row(
-      children: <Widget>[
-        DropdownButtonHideUnderline(
-          child: DropdownButton<Language>(
-            isDense: true,
-            onChanged: (value) {
-              setState(() {
-                _selectedLanguage = value!;
-                widget.onValuePicked!(value);
-              });
-            },
-            items: items,
-            value: _selectedLanguage,
-          ),
-        ),
-      ],
+    return DropdownButtonHideUnderline(
+      child: DropdownButton<Language>(
+        isExpanded: true,
+        onChanged: (value) {
+          setState(() {
+            _selectedLanguage = value!;
+            widget.onValuePicked!(value);
+          });
+        },
+        items: items,
+        value: _selectedLanguage,
+      ),
     );
   }
 
   Widget _buildDefaultMenuItem(Language language) {
-    return Row(
-      children: <Widget>[
-        SizedBox(
-          width: 8.0,
-        ),
-        Text("${language.name} (${language.isoCode})"),
-      ],
-    );
+    return Text("${language.name} (${language.isoCode})");
   }
 }

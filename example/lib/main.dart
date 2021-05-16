@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/cupertino.dart';
 
-import 'package:language_pickers/languages.dart';
-import 'package:language_pickers/language_pickers.dart';
+import 'package:language_picker/languages.dart';
+import 'package:language_picker/language_picker.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'language_pickers Example',
+      title: 'language_picker Example',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'language_pickers Example'),
+      home: MyHomePage(title: 'language_picker Example'),
     );
   }
 }
@@ -83,10 +83,10 @@ class _MyHomePageState extends State<MyHomePage> {
         return LanguagePickerCupertino(
           pickerSheetHeight: 200.0,
           onValuePicked: (Language language) => setState(() {
-                _selectedCupertinoLanguage = language;
-                print(_selectedCupertinoLanguage.name);
-                print(_selectedCupertinoLanguage.isoCode);
-              }),
+            _selectedCupertinoLanguage = language;
+            print(_selectedCupertinoLanguage.name);
+            print(_selectedCupertinoLanguage.isoCode);
+          }),
         );
       });
 

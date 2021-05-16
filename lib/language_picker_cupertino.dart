@@ -1,5 +1,5 @@
-import 'package:language_pickers/languages.dart';
-import 'package:language_pickers/utils/typedefs.dart';
+import 'package:language_picker/languages.dart';
+import 'package:language_picker/utils/typedefs.dart';
 import 'package:flutter/cupertino.dart';
 
 const double defaultPickerSheetHeight = 216.0;
@@ -79,7 +79,8 @@ class LanguagePickerCupertino extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _CupertinoLanguagePickerState createState() => _CupertinoLanguagePickerState();
+  _CupertinoLanguagePickerState createState() =>
+      _CupertinoLanguagePickerState();
 }
 
 class _CupertinoLanguagePickerState extends State<LanguagePickerCupertino> {

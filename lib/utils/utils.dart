@@ -1,8 +1,9 @@
-import 'package:language_pickers/languages.dart';
+import 'package:language_picker/languages.dart';
 
 class LanguagePickerUtils {
   static Language getLanguageByIsoCode(String isoCode) {
-    final _languages = defaultLanguagesList.map((item) => Language.fromMap(item)).toList();
+    final _languages =
+        defaultLanguagesList.map((item) => Language.fromMap(item)).toList();
     try {
       return _languages
           .where((language) =>
@@ -23,7 +24,7 @@ class LanguagePickerUtils {
       height: 20.0,
       width: 30.0,
       fit: BoxFit.fill,
-      package: "language_pickers",
+      package: "language_picker",
     );
   } */
 }

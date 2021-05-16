@@ -1,3 +1,7 @@
+## [0.3.0]
+
+- Rename the library to to language_picker.
+
 ## [0.2.0+1] - 3rd March, 2020
 
 - Fix type bugs for other widgets.

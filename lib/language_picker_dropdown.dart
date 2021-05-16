@@ -1,5 +1,5 @@
-import 'package:language_pickers/languages.dart';
-import 'package:language_pickers/utils/typedefs.dart';
+import 'package:language_picker/languages.dart';
+import 'package:language_picker/utils/typedefs.dart';
 import 'package:flutter/material.dart';
 
 ///Provides a customizable [DropdownButton] for all languages

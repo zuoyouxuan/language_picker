@@ -1,5 +1,5 @@
-name: language_pickers_example
-description: It&#x27;s example application of language_pickers Flutter package.
+name: language_picker_example
+description: Example application of language_picker Flutter package.
 
 version: 1.0.0+1
 
@@ -12,7 +12,7 @@ dependencies:
 
   cupertino_icons: ^0.1.2
 
-  language_pickers:
+  language_picker:
     path: ../
 
 dev_dependencies:

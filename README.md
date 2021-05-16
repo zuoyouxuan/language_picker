@@ -1,15 +1,12 @@
-# language_pickers
+# language_picker
 
-![](https://img.shields.io/github/license/gomgom/flutter_language_pickers.svg)
-![](https://img.shields.io/badge/Flutter%20Package-^0.2.0+1-blue.svg)
-![](https://img.shields.io/github/languages/code-size/gomgom/flutter_language_pickers.svg)
+![](https://img.shields.io/github/license/atn832/language_picker.svg)
+[![pub package](https://img.shields.io/pub/v/language_picker.svg)](https://pub.dartlang.org/packages/language_picker)
+![](https://img.shields.io/github/languages/code-size/atn832/language_picker.svg)
 
-It's [package](https://flutter.io/developing-packages/) for Dart and Flutter.
+Provides a dropdown and dialog to select a language.
 
-It makes language select pickers for you in Flutter. You can use it freely in lots of ways.
-
-And specially thanks to Figen Güngör([@figengungor](https://github.com/figengungor)), who is opened the source code of '[country_pickers](https://pub.dartlang.org/packages/country_pickers)'.
-Lots of source codes are from [country_pickers GitHub Repository](https://github.com/figengungor/country_pickers), so works are very easy. Thanks again.
+Originally made by [@gomgom](https://github.com/gomgom) at https://pub.dev/packages/language_pickers. As of May 2021, this project has had no activity for more than a year and does not compile anymore. So I am shamelessly republishing it. :) I've also improved the API and fixed a few issues along the way.
 
 ![](art/example.gif)
 
@@ -18,8 +15,8 @@ Lots of source codes are from [country_pickers GitHub Repository](https://github
 #### LanguagePickerDropdown example
 
 ```dart
-import 'package:language_pickers/language.dart';
-import 'package:language_pickers/language_pickers.dart';
+import 'package:language_picker/language.dart';
+import 'package:language_picker/language_picker.dart';
 
 Language _selectedDropdownLanguage =
       LanguagePickerUtils.getLanguageByIsoCode('ko');
@@ -52,8 +49,8 @@ LanguagePickerDropdown(
 #### LanguagePickerDialog example
 
 ```dart
-import 'package:language_pickers/language.dart';
-import 'package:language_pickers/language_pickers.dart';
+import 'package:language_picker/language.dart';
+import 'package:language_picker/language_picker.dart';
 
 Language _selectedDialogLanguage =
       LanguagePickerUtils.getLanguageByIsoCode('ko');
@@ -89,8 +86,8 @@ void _openLanguagePickerDialog() => showDialog(
 #### LanguagePickerCupertino example
 
 ```dart
-import 'package:language_pickers/language.dart';
-import 'package:language_pickers/language_pickers.dart';
+import 'package:language_picker/language.dart';
+import 'package:language_picker/language_picker.dart';
 
 Language _selectedCupertinoLanguage =
   LanguagePickerUtils.getLanguageByIsoCode('ko');
@@ -117,13 +114,3 @@ Widget _buildCupertinoItem(Language language) => Row(
     ],
   );
 ```
-
-
-## Information
-
-**If you want to change your language name to your native language, not English, please make some issues on [Github](https://github.com/gomgom/flutter_language_pickers/issues).**
-
-
-## Credits
-
-Developed by [gomgom](https://www.gomgom.net)(Github [@gomgom](https://github.com/gomgom)).

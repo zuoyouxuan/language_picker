@@ -10,7 +10,7 @@ class LanguagePickerUtils {
               language.isoCode.toLowerCase() == isoCode.toLowerCase())
           .toList()[0];
     } catch (error) {
-      throw Exception("The initialValue provided is not a supported iso code!");
+      throw Exception("$isoCode is not a supported iso code!");
     }
   }
 

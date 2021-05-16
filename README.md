@@ -12,7 +12,66 @@ Originally made by [@gomgom](https://github.com/gomgom) at https://pub.dev/packa
 
 ## Getting Started
 
-#### LanguagePickerDropdown example
+### Minimal example
+
+This will use the default builder and default list of languages.
+
+```dart
+LanguagePickerDropdown(
+  onValuePicked: (Language language) {
+    print(language.name);
+  })
+```
+
+#### Preselect a value
+
+Use the language's ISO name.
+
+```dart
+LanguagePickerDropdown(
+  initialValue: 'ko',
+  onValuePicked: (Language language) {
+    print(language.name);
+  })
+```
+
+#### Customize rendering
+
+If you don't want to see the ISO code:
+
+```dart
+LanguagePickerDropdown(
+  itemBuilder: languageBuilder,
+  onValuePicked: (Language language) {
+    print(language.name);
+  })
+
+...
+
+// Just render the name.
+final languageBuilder = (language) => Text(language.name);
+```
+
+#### Customize the list of languages
+
+```dart
+LanguagePickerDropdown(
+  languages: supportedLanguages,
+  onValuePicked: (Language language) {
+    print(language.name);
+  })
+
+...
+
+final supportedLanguages = [
+  LanguagePickerUtils.getLanguageByIsoCode('en'),
+  LanguagePickerUtils.getLanguageByIsoCode('fr'),
+  LanguagePickerUtils.getLanguageByIsoCode('ja'),
+  LanguagePickerUtils.getLanguageByIsoCode('ko'),
+];
+```
+
+### LanguagePickerDropdown example
 
 ```dart
 import 'package:language_picker/language.dart';
@@ -46,7 +105,7 @@ LanguagePickerDropdown(
                   ),
 ```
 
-#### LanguagePickerDialog example
+### LanguagePickerDialog example
 
 ```dart
 import 'package:language_picker/language.dart';
@@ -83,7 +142,7 @@ void _openLanguagePickerDialog() => showDialog(
   );
 ```
 
-#### LanguagePickerCupertino example
+### LanguagePickerCupertino example
 
 ```dart
 import 'package:language_picker/language.dart';

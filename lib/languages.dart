@@ -14,7 +14,10 @@ final Map<String, Language> defaultLanguageMap = Map.fromIterable(
     key: (element) => element['isoCode'],
     value: (element) => Language.fromMap(element));
 
-final List defaultLanguagesList = [
+final List<Language> defaultLanguages =
+    defaultLanguagesList.map((m) => Language.fromMap(m)).toList();
+
+final List<Map<String, String>> defaultLanguagesList = [
   {"isoCode": "ab", "name": "Abkhazian"},
   {"isoCode": "aa", "name": "Afar"},
   {"isoCode": "af", "name": "Afrikaans"},

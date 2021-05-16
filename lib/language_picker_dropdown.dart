@@ -8,7 +8,7 @@ class LanguagePickerDropdown extends StatefulWidget {
       {this.itemBuilder,
       this.initialValue,
       this.onValuePicked,
-      this.languagesList});
+      this.languages});
 
   ///This function will be called to build the child of DropdownMenuItem
   ///If it is not provided, default one will be used which displays
@@ -24,7 +24,7 @@ class LanguagePickerDropdown extends StatefulWidget {
   final ValueChanged<Language>? onValuePicked;
 
   /// List of languages available in this picker.
-  final List<Map<String, String>>? languagesList;
+  final List<Language>? languages;
 
   @override
   _LanguagePickerDropdownState createState() => _LanguagePickerDropdownState();
@@ -36,8 +36,7 @@ class _LanguagePickerDropdownState extends State<LanguagePickerDropdown> {
 
   @override
   void initState() {
-    final languageList = widget.languagesList ?? defaultLanguagesList;
-    _languages = languageList.map((item) => Language.fromMap(item)).toList();
+    _languages = widget.languages ?? defaultLanguages;
     if (widget.initialValue != null) {
       try {
         _selectedLanguage = _languages

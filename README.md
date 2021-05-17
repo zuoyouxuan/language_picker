@@ -1,9 +1,7 @@
 # language_picker
 
-![](https://img.shields.io/github/license/atn832/language_picker.svg)
 [![pub package](https://img.shields.io/pub/v/language_picker.svg)](https://pub.dartlang.org/packages/language_picker)
 [![unit-tests](https://github.com/atn832/language_picker/actions/workflows/unit-tests.yaml/badge.svg)](https://github.com/atn832/language_picker/actions/workflows/unit-tests.yaml)
-![](https://img.shields.io/github/languages/code-size/atn832/language_picker.svg)
 
 Provides a dropdown and dialog to select a language.
 

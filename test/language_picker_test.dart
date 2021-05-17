@@ -7,4 +7,9 @@ void main() {
     expect(Languages.french.isoCode, equals('fr'));
     expect(Languages.defaultLanguages.length, greaterThan(180));
   });
+
+  test('Language from iso code', () {
+    expect(Language.fromIsoCode('fr'), equals(Languages.french));
+    expect(() => Language.fromIsoCode('xyz'), throwsStateError);
+  });
 }

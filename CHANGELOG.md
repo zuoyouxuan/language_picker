@@ -1,3 +1,7 @@
+## 0.4.1
+
+- Restored finding a language by ISO code as `Language.fromIsoCode(isoCode)`.
+
 ## 0.4.0
 
 Breaking changes:

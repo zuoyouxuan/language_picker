@@ -1,6 +1,10 @@
 ## 0.4.0
 
-- Breaking change: replaced `LanguagePickerUtils.getLanguageByIsoCode(isoCode);` by `Languages.languageName`.
+Breaking changes:
+
+- Replaced `LanguagePickerUtils.getLanguageByIsoCode(isoCode)` by `Languages.languageName`.
+- Replaced `List<Map<String, String>> defaultLanguagesList` by `List<Language> Languages.defaultLanguages`.
+- Replaced LanguagePickerDialog and LanguerPickerCupertino's `List<Map<String, String>>? languagesList` parameter by `List<Language>> languages`.
 
 ## 0.3.0+1
 

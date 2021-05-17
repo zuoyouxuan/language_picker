@@ -76,7 +76,7 @@ class LanguagePickerDialog extends StatefulWidget {
   final Widget? searchEmptyView;
 
   /// List of languages available in this picker.
-  final List<Map<String, String>>? languagesList;
+  final List<Language>? languages;
 
   LanguagePickerDialog({
     Key? key,
@@ -94,7 +94,7 @@ class LanguagePickerDialog extends StatefulWidget {
     this.searchInputDecoration,
     this.searchCursorColor,
     this.searchEmptyView,
-    this.languagesList,
+    this.languages,
   }) : super(key: key);
 
   @override
@@ -109,8 +109,7 @@ class SingleChoiceDialogState extends State<LanguagePickerDialog> {
 
   @override
   void initState() {
-    final languageList = widget.languagesList ?? defaultLanguagesList;
-    _allLanguages = languageList.map((item) => Language.fromMap(item)).toList();
+    _allLanguages = widget.languages ?? Languages.defaultLanguages;
     _filteredLanguages = _allLanguages;
     super.initState();
   }

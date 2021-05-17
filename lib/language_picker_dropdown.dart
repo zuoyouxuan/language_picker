@@ -36,7 +36,7 @@ class _LanguagePickerDropdownState extends State<LanguagePickerDropdown> {
 
   @override
   void initState() {
-    _languages = widget.languages ?? defaultLanguages;
+    _languages = widget.languages ?? Languages.defaultLanguages;
     if (widget.initialValue != null) {
       try {
         _selectedLanguage = _languages

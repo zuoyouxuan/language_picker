@@ -6,7 +6,17 @@ import 'package:language_picker/language_picker_dropdown.dart';
 import 'package:language_picker/languages.dart';
 
 void main() {
-  testWidgets('LanguagePickerDropdown opens and lets you select a language',
+  testWidgets('LanguagePickerDropdown uses the default list of languages',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(
+        MaterialApp(home: Scaffold(body: LanguagePickerDropdown())));
+    expect(find.textContaining('Armenian'), findsOneWidget);
+    expect(find.textContaining('Japanese'), findsOneWidget);
+    expect(find.textContaining('Turkish'), findsOneWidget);
+  });
+
+  testWidgets(
+      'Renders only the selected languages and lets the user select a language',
       (WidgetTester tester) async {
     final streamController = StreamController<Language>();
     final picker = LanguagePickerDropdown(
@@ -19,6 +29,9 @@ void main() {
     await tester.tap(find.byType(LanguagePickerDropdown));
     await tester.pump(Duration(seconds: 1));
     await tester.pump();
+
+    expect(find.textContaining('Japanese'), findsNothing);
+
     // As per https://stackoverflow.com/a/64496868, once the menu is open, there
     // there are two widgets, and we should tap the latter one.
     expect(find.textContaining('French'), findsNWidgets(2));
@@ -36,5 +49,17 @@ void main() {
     expect(find.textContaining('French'), findsOneWidget);
     // Somehow French is pre-selected but English exists in the tree.
     expect(find.textContaining('English'), findsOneWidget);
+  });
+
+  testWidgets('item builder', (WidgetTester tester) async {
+    final picker = LanguagePickerDropdown(
+      languages: [Languages.english, Languages.french],
+      // Render only the iso code, not the name.
+      itemBuilder: (language) => Text(language.isoCode),
+    );
+    await tester.pumpWidget(MaterialApp(home: Scaffold(body: picker)));
+    // Check that it rendered the iso code, but not the name.
+    expect(find.text('fr'), findsOneWidget);
+    expect(find.text('French'), findsNothing);
   });
 }

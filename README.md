@@ -29,7 +29,7 @@ Use the language's ISO name.
 
 ```dart
 LanguagePickerDropdown(
-  initialValue: 'ko',
+  initialValue: Languages.korean,
   onValuePicked: (Language language) {
     print(language.name);
   })
@@ -94,14 +94,14 @@ Widget _buildDropdownItem(Language language) {
 
 // Builder
 LanguagePickerDropdown(
-                    initialValue: 'ko',
-                    itemBuilder: _buildDropdownItem,
-                    onValuePicked: (Language language) {
-                      _selectedDropdownLanguage = language;
-                      print(_selectedDropdownLanguage.name);
-                      print(_selectedDropdownLanguage.isoCode);
-                    },
-                  ),
+  initialValue: Languages.korean,
+  itemBuilder: _buildDropdownItem,
+  onValuePicked: (Language language) {
+    _selectedDropdownLanguage = language;
+    print(_selectedDropdownLanguage.name);
+    print(_selectedDropdownLanguage.isoCode);
+  },
+),
 ```
 
 ### LanguagePickerDialog example

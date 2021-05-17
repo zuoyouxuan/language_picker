@@ -4,7 +4,12 @@ Breaking changes:
 
 - Replaced `LanguagePickerUtils.getLanguageByIsoCode(isoCode)` by `Languages.languageName`.
 - Replaced `List<Map<String, String>> defaultLanguagesList` by `List<Language> Languages.defaultLanguages`.
+- Replaced LanguagePickerDropdown's `String? initialValue` parameter by `Language? initialValue`.
 - Replaced LanguagePickerDialog and LanguerPickerCupertino's `List<Map<String, String>>? languagesList` parameter by `List<Language>> languages`.
+
+Other:
+
+- Removed duplicate Norwegian language.
 
 ## 0.3.0+1
 

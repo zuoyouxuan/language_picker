@@ -108,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Expanded(
                 child: Center(
                   child: LanguagePickerDropdown(
-                    initialValue: 'ko',
+                    initialValue: Languages.korean,
                     itemBuilder: _buildDropdownItem,
                     onValuePicked: (Language language) {
                       _selectedDropdownLanguage = language;

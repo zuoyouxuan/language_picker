@@ -16,9 +16,8 @@ class LanguagePickerDropdown extends StatefulWidget {
   ///Check _buildDefaultMenuItem method for details.
   final ItemBuilder? itemBuilder;
 
-  ///It should be one of the ISO ALPHA-2 Code that is provided
-  ///in languagesList map of languages.dart file.
-  final String? initialValue;
+  ///Preselected language.
+  final Language? initialValue;
 
   ///This function will be called whenever a Language item is selected.
   final ValueChanged<Language>? onValuePicked;
@@ -39,11 +38,11 @@ class _LanguagePickerDropdownState extends State<LanguagePickerDropdown> {
     _languages = widget.languages ?? Languages.defaultLanguages;
     if (widget.initialValue != null) {
       try {
-        _selectedLanguage = _languages
-            .firstWhere((language) => language.isoCode == widget.initialValue);
+        _selectedLanguage = _languages.firstWhere(
+            (language) => language.isoCode == widget.initialValue!.isoCode);
       } catch (error) {
         throw Exception(
-            "The initialValue provided is not a supported iso code!");
+            "The initialValue is missing from the list of displayed languages!");
       }
     } else {
       _selectedLanguage = _languages[0];

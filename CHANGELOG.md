@@ -1,3 +1,7 @@
+## 0.4.0
+
+- Breaking change: replaced `LanguagePickerUtils.getLanguageByIsoCode(isoCode);` by `Languages.languageName`.
+
 ## 0.3.0+1
 
 - Documented usage example.

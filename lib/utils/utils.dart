@@ -1,19 +1,4 @@
-import 'package:language_picker/languages.dart';
-
 class LanguagePickerUtils {
-  static Language getLanguageByIsoCode(String isoCode) {
-    final _languages =
-        defaultLanguagesList.map((item) => Language.fromMap(item)).toList();
-    try {
-      return _languages
-          .where((language) =>
-              language.isoCode.toLowerCase() == isoCode.toLowerCase())
-          .toList()[0];
-    } catch (error) {
-      throw Exception("$isoCode is not a supported iso code!");
-    }
-  }
-
   static String getFlagImageAssetPath(String isoCode) {
     return "assets/${isoCode.toLowerCase()}.png";
   }

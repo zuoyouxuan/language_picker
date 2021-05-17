@@ -1,25 +1,4 @@
-export 'languages.g.dart';
-
-class Language {
-  Language(this.isoCode, this.name);
-
-  final String name;
-  final String isoCode;
-
-  Language.fromMap(Map<String, String> map)
-      : name = map['name']!,
-        isoCode = map['isoCode']!;
-}
-
-final Map<String, Language> defaultLanguageMap = Map.fromIterable(
-    defaultLanguagesList,
-    key: (element) => element['isoCode'],
-    value: (element) => Language.fromMap(element));
-
-final List<Language> defaultLanguages =
-    defaultLanguagesList.map((m) => Language.fromMap(m)).toList();
-
-final List<Map<String, String>> defaultLanguagesList = [
+[
   {"isoCode": "ab", "name": "Abkhazian"},
   {"isoCode": "aa", "name": "Afar"},
   {"isoCode": "af", "name": "Afrikaans"},
@@ -41,7 +20,6 @@ final List<Map<String, String>> defaultLanguagesList = [
   {"isoCode": "bn", "name": "Bengali"},
   {"isoCode": "bh", "name": "Bihari Languages"},
   {"isoCode": "bi", "name": "Bislama"},
-  {"isoCode": "nb", "name": "Norwegian"},
   {"isoCode": "bs", "name": "Bosnian"},
   {"isoCode": "br", "name": "Breton"},
   {"isoCode": "bg", "name": "Bulgarian"},
@@ -205,4 +183,4 @@ final List<Map<String, String>> defaultLanguagesList = [
   {"isoCode": "yo", "name": "Yoruba"},
   {"isoCode": "za", "name": "Zhuang"},
   {"isoCode": "zu", "name": "Zulu"}
-];
+]

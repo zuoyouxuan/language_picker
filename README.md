@@ -64,10 +64,10 @@ LanguagePickerDropdown(
 ...
 
 final supportedLanguages = [
-  LanguagePickerUtils.getLanguageByIsoCode('en'),
-  LanguagePickerUtils.getLanguageByIsoCode('fr'),
-  LanguagePickerUtils.getLanguageByIsoCode('ja'),
-  LanguagePickerUtils.getLanguageByIsoCode('ko'),
+  Languages.english,
+  Languages.french,
+  Languages.japanese,
+  Languages.korean,
 ];
 ```
 
@@ -77,8 +77,7 @@ final supportedLanguages = [
 import 'package:language_picker/language.dart';
 import 'package:language_picker/language_picker.dart';
 
-Language _selectedDropdownLanguage =
-      LanguagePickerUtils.getLanguageByIsoCode('ko');
+Language _selectedDropdownLanguage = Languages.korean;
 
 // It's sample code of Dropdown Item.
 Widget _buildDropdownItem(Language language) {
@@ -111,8 +110,7 @@ LanguagePickerDropdown(
 import 'package:language_picker/language.dart';
 import 'package:language_picker/language_picker.dart';
 
-Language _selectedDialogLanguage =
-      LanguagePickerUtils.getLanguageByIsoCode('ko');
+Language _selectedDialogLanguage = Languages.korean;
 
 // It's sample code of Dialog Item.
 Widget _buildDialogItem(Language language) => Row(
@@ -148,8 +146,7 @@ void _openLanguagePickerDialog() => showDialog(
 import 'package:language_picker/language.dart';
 import 'package:language_picker/language_picker.dart';
 
-Language _selectedCupertinoLanguage =
-  LanguagePickerUtils.getLanguageByIsoCode('ko');
+Language _selectedCupertinoLanguage = Languages.korean;
 
 // It's sample code of Cupertino Item.
 void _openCupertinoLanguagePicker() => showCupertinoModalPopup<void>(

@@ -30,12 +30,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Language _selectedDropdownLanguage =
-      LanguagePickerUtils.getLanguageByIsoCode('ko');
-  Language _selectedDialogLanguage =
-      LanguagePickerUtils.getLanguageByIsoCode('ko');
-  Language _selectedCupertinoLanguage =
-      LanguagePickerUtils.getLanguageByIsoCode('ko');
+  Language _selectedDropdownLanguage = Languages.korean;
+  Language _selectedDialogLanguage = Languages.korean;
+  Language _selectedCupertinoLanguage = Languages.korean;
 
   // It's sample code of Dropdown Item.
   Widget _buildDropdownItem(Language language) {

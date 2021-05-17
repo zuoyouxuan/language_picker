@@ -21,8 +21,7 @@ class MyAlertDialog<T> extends StatelessWidget {
       height: 0.0,
     ),
     this.isDividerEnabled = true,
-  })  : assert(contentPadding != null),
-        super(key: key);
+  }) : super(key: key);
 
   /// The (optional) title of the dialog is displayed in a large font at the top
   /// of the dialog.
@@ -61,7 +60,7 @@ class MyAlertDialog<T> extends StatelessWidget {
   /// The (optional) set of actions that are displayed at the bottom of the
   /// dialog.
   ///
-  /// Typically this is a list of [FlatButton] widgets.
+  /// Typically this is a list of [TextButton] widgets.
   ///
   /// These widgets will be wrapped in a [ButtonBar], which introduces 8 pixels
   /// of padding on each side.

@@ -16,7 +16,6 @@
 # Generated files
 gen/
 out/
-*.g.dart
 
 # Gradle files
 .gradle/

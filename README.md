@@ -11,6 +11,12 @@ Originally made by [@gomgom](https://github.com/gomgom) at https://pub.dev/packa
 
 ## Getting Started
 
+### Finding languages
+
+* by name: `Languages.korean`
+* by ISO code: `Language.fromIsoCode('fr')`
+* preset languages: `Languages.defaultLanguages`
+
 ### Minimal example
 
 This will use the default builder and default list of languages.
@@ -22,9 +28,7 @@ LanguagePickerDropdown(
   })
 ```
 
-#### Preselect a value
-
-Use the language's ISO name.
+### Preselect a value
 
 ```dart
 LanguagePickerDropdown(
@@ -34,9 +38,9 @@ LanguagePickerDropdown(
   })
 ```
 
-#### Customize rendering
+### Customize rendering
 
-If you don't want to see the ISO code:
+If you don't want to display the ISO code:
 
 ```dart
 LanguagePickerDropdown(
@@ -51,7 +55,7 @@ LanguagePickerDropdown(
 final languageBuilder = (language) => Text(language.name);
 ```
 
-#### Customize the list of languages
+### Customize the list of languages
 
 ```dart
 LanguagePickerDropdown(

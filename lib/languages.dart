@@ -9,4 +9,7 @@ class Language {
   Language.fromMap(Map<String, String> map)
       : name = map['name']!,
         isoCode = map['isoCode']!;
+
+  bool operator ==(o) =>
+      o is Language && name == o.name && isoCode == o.isoCode;
 }

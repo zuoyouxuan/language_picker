@@ -38,8 +38,8 @@ class _LanguagePickerDropdownState extends State<LanguagePickerDropdown> {
     _languages = widget.languages ?? Languages.defaultLanguages;
     if (widget.initialValue != null) {
       try {
-        _selectedLanguage = _languages.firstWhere(
-            (language) => language.isoCode == widget.initialValue!.isoCode);
+        _selectedLanguage = _languages
+            .firstWhere((language) => language == widget.initialValue!);
       } catch (error) {
         throw Exception(
             "The initialValue is missing from the list of displayed languages!");

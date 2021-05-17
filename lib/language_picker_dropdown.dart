@@ -40,8 +40,7 @@ class _LanguagePickerDropdownState extends State<LanguagePickerDropdown> {
     if (widget.initialValue != null) {
       try {
         _selectedLanguage = _languages
-            .where((language) => language.isoCode == widget.initialValue)
-            .toList()[0];
+            .firstWhere((language) => language.isoCode == widget.initialValue);
       } catch (error) {
         throw Exception(
             "The initialValue provided is not a supported iso code!");

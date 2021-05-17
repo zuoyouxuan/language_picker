@@ -9,6 +9,7 @@ Breaking changes:
 
 Other:
 
+- Implemented the `Language.==` operator.
 - Removed duplicate Norwegian language.
 
 ## 0.3.0+1

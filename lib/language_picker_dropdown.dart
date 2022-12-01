@@ -1,3 +1,4 @@
+import 'package:language_picker/language_picker_dropdown_controller.dart';
 import 'package:language_picker/languages.dart';
 import 'package:language_picker/utils/typedefs.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,7 @@ import 'package:flutter/material.dart';
 class LanguagePickerDropdown extends StatefulWidget {
   LanguagePickerDropdown(
       {this.itemBuilder,
+      this.controller,
       this.initialValue,
       this.onValuePicked,
       this.languages});
@@ -21,6 +23,9 @@ class LanguagePickerDropdown extends StatefulWidget {
 
   ///This function will be called whenever a Language item is selected.
   final ValueChanged<Language>? onValuePicked;
+
+  /// An optional controller.
+  final LanguagePickerDropdownController? controller;
 
   /// List of languages available in this picker.
   final List<Language>? languages;
@@ -44,9 +49,17 @@ class _LanguagePickerDropdownState extends State<LanguagePickerDropdown> {
         throw Exception(
             "The initialValue is missing from the list of displayed languages!");
       }
+    } else if (widget.controller != null) {
+      _selectedLanguage = widget.controller!.value;
     } else {
       _selectedLanguage = _languages[0];
     }
+
+    widget.controller?.addListener(() {
+      setState(() {
+        _selectedLanguage = widget.controller!.value;
+      });
+    });
 
     super.initState();
   }

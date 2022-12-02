@@ -74,6 +74,20 @@ final supportedLanguages = [
 ];
 ```
 
+### Programmatically change the selected language
+
+```dart
+// Pre-selected language is French.
+final controller = LanguagePickerDropdownController(Languages.french);
+final picker = LanguagePickerDropdown(
+  controller: controller,
+  languages: [Languages.english, Languages.french, Languages.norwegian],
+);
+
+// In some other method: Force it to switch to Norwegian.
+controller.value = Languages.norwegian;
+```
+
 ### LanguagePickerDropdown example
 
 ```dart

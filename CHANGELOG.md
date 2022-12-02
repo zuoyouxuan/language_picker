@@ -1,3 +1,7 @@
+## 0.4.2
+
+- Implemented LanguagePickerDropdownController.
+
 ## 0.4.1
 
 - Restored finding a language by ISO code as `Language.fromIsoCode(isoCode)`.

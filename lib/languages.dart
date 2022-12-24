@@ -19,5 +19,5 @@ class Language {
       o is Language && name == o.name && isoCode == o.isoCode;
 
   @override
-  int get hashCode => super.hashCode;
+  int get hashCode => isoCode.hashCode;
 }

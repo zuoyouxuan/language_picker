@@ -3,8 +3,6 @@ import 'package:language_picker/utils/typedefs.dart';
 
 import 'package:language_picker/utils/my_alert_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
-import 'languages.dart';
 
 ///Provides a customizable [Dialog] which displays all languages
 /// with optional search feature

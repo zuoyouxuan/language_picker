@@ -1,3 +1,7 @@
+## 0.4.3
+
+- Fixed bug when Language was being used as a Key in a Set or Map.
+
 ## 0.4.2
 
 - Implemented LanguagePickerDropdownController.
